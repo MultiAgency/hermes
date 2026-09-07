@@ -1,0 +1,5 @@
+name: multi_user_basic
+version: 1.0.0
+description: "Dashboard auth provider — per-user username/password credentials for team members. Reads from dashboard.multi_user_basic.users in config.yaml. Each user gets their own provider entry on the login page. Sessions use stateless HMAC-signed tokens; password hashing uses stdlib scrypt."
+author: Hermes
+kind: backend
