@@ -17,6 +17,17 @@ model:
   base_url: https://openrouter.ai/api/v1
   api_mode: chat_completions
 
+# Tried in order when the primary model fails with a rate limit, an overload
+# or a connection error (MultiAgency/near-agencies#120: with this list empty,
+# 7 coder runs and 7 maintainer runs failed while the provider was down).
+# Choose a provider other than the primary's, so one outage cannot take out
+# both. An entry without `provider` and `model` is ignored.
+fallback_providers:
+  - provider: <FILL>   # a provider other than the primary's
+    model: <FILL>
+    # base_url: <FILL>     # optional
+    # api_mode: <FILL>     # optional
+
 database:
   journal_mode: wal
 
